@@ -12,17 +12,23 @@
 
 <br />
 <div align="center">
-  <a href="https://github.com/tgoddessana/wireguard-restapi">
-    <img src="docs/_static/full_logo.svg" style="width:75%";>
-  </a>
 
-<h3 align="center">wireguard-restapi</h3>
+[//]: # (  <a href="https://github.com/tgoddessana/wireguard-restapi">)
+
+[//]: # (    <img src="docs/_static/full_logo.svg" style="width:75%";>)
+
+[//]: # (  </a>)
+
+<h3 align="center">WireGuard-RESTAPI</h3>
 
   <p align="center">
     A simple, secure, and easy way to build a WireGuard API server. 🔒
     <br />
-    <a href="https://tgoddessana.github.io/wireguard-restapi/"><strong>Explore the docs »</strong></a>
+
+[//]: # (    <a href="https://tgoddessana.github.io/wireguard-restapi/"><strong>Explore the docs »</strong></a>)
+
     <br />
+
   </p>
 </div>
 
@@ -54,7 +60,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 - Email: twicegoddessana1229@gmail.com
 - Project
   Link: [https://github.com/tgoddessana/wireguard-restapi](https://github.com/tgoddessana/wireguard-restapi)
-
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
