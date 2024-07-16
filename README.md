@@ -10,8 +10,6 @@
 
 </div>
 
-
-<!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="https://github.com/tgoddessana/wireguard-restapi">
@@ -21,19 +19,23 @@
 <h3 align="center">wireguard-restapi</h3>
 
   <p align="center">
-    The fattest way to develop REST APIs. based on FastAPI.
+    A simple, secure, and easy way to build a WireGuard API server. 🔒
     <br />
     <a href="https://tgoddessana.github.io/wireguard-restapi/"><strong>Explore the docs »</strong></a>
     <br />
   </p>
 </div>
 
-
-<!---------------------------------------------------------------------------------------------->
-
 <br/>
 
-## About wireguard-restapi
+## Introducing WireGuard-RESTAPI: Simplify Your VPN Setup
+
+---
+
+WireGuard-RESTAPI is a simple, secure, and easy way to build a WireGuard API server. It is designed to simplify the
+process of setting up a VPN server and managing clients. With WireGuard-RESTAPI, you can create, delete, and manage
+WireGuard clients using a RESTful API. It provides a user-friendly interface for managing your VPN server and clients,
+making it easy to set up and maintain a secure VPN connection.
 
 <br/>
 
@@ -42,10 +44,6 @@
 ---
 
 Distributed under the MIT License. See `LICENSE` for more information.
-
-
-
-<!---------------------------------------------------------------------------------------------->
 
 <br/>
 
@@ -57,8 +55,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 - Project
   Link: [https://github.com/tgoddessana/wireguard-restapi](https://github.com/tgoddessana/wireguard-restapi)
 
-<!---------------------------------------------------------------------------------------------->
-<!---------------------------------------------------------------------------------------------->
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
