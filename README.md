@@ -24,24 +24,16 @@
   <p align="center">
     A simple, secure, and easy way to build a WireGuard API server. 🔒
     <br />
-
-[//]: # (    <a href="https://tgoddessana.github.io/wireguard-restapi/"><strong>Explore the docs »</strong></a>)
-
-    <br />
-
   </p>
 </div>
 
 <br/>
 
-## Introducing WireGuard-RESTAPI: Simplify Your VPN Setup
-
 ---
 
-WireGuard-RESTAPI is a simple, secure, and easy way to build a WireGuard API server. It is designed to simplify the
-process of setting up a VPN server and managing clients. With WireGuard-RESTAPI, you can create, delete, and manage
-WireGuard clients using a RESTful API. It provides a user-friendly interface for managing your VPN server and clients,
-making it easy to set up and maintain a secure VPN connection.
+WireGuard-RESTAPI is a simple, secure, and easy way to build a WireGuard API server. This provides a REST
+API endpoint to manage peers (add, get configuration file, get QR code, modify, delete) and manage interfaces. With a
+few settings, users can easily get a REST API to manage their own WireGuard server.
 
 <br/>
 
