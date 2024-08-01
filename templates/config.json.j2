@@ -1,0 +1,37 @@
+{
+  "log": {
+    "loglevel": "warning",
+    "access": "/home/ubuntu/xray_log/access.log",
+    "error": "/home/ubuntu/xray_log/error.log"
+  },
+  "inbounds": [
+    {
+      "port": 443,
+      "protocol": "vmess",
+      "settings": {
+        "clients": [
+          {% for xray_vmess_client in xray_vmess_clients %}
+          {
+            "id": "{{ xray_vmess_client.uuid }}",
+            "email": "{{ xray_vmess_client.email }}",
+            "alterId": 64
+          }{% if not loop.last %},{% endif %}
+          {% endfor %}
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+          "path": "/ray"
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom",
+      "settings": {}
+    }
+  ]
+}
+
