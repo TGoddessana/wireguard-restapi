@@ -6,8 +6,6 @@ services:
       - ./compose-data/xray/config:/etc/xray
     ports:
       - "10000:10000"
-      - "10001:10001"
-      - "443:443"
     restart: unless-stopped
 
   nginx:
