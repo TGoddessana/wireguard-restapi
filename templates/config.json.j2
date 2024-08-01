@@ -12,7 +12,7 @@
         "clients": [
           {% for xray_vmess_client in xray_vmess_clients %}
           {
-            "id": "{{ xray_vmess_client.uuid }}",
+            "id": "{{ xray_vmess_client.id }}",
             "email": "{{ xray_vmess_client.email }}",
             "alterId": 64
           }{% if not loop.last %},{% endif %}
