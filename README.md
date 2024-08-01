@@ -13,16 +13,16 @@
 <br />
 <div align="center">
 
-[//]: # (  <a href="https://github.com/tgoddessana/wireguard-restapi">)
+[//]: # (  <a href="https://github.com/tgoddessana/Xray-restapi">)
 
 [//]: # (    <img src="docs/_static/full_logo.svg" style="width:75%";>)
 
 [//]: # (  </a>)
 
-<h3 align="center">WireGuard-RESTAPI</h3>
+<h3 align="center">Xray-RESTAPI</h3>
 
   <p align="center">
-    A simple, secure, and easy way to build a WireGuard API server. 🔒
+    A simple, secure, and easy way to build a Xray API server. 🔒
     <br />
   </p>
 </div>
@@ -31,9 +31,9 @@
 
 ---
 
-WireGuard-RESTAPI is a simple, secure, and easy way to build a WireGuard API server. This provides a REST
+Xray-RESTAPI is a simple, secure, and easy way to build a Xray API server. This provides a REST
 API endpoint to manage peers (add, get configuration file, get QR code, modify, delete) and manage interfaces. With a
-few settings, users can easily get a REST API to manage their own WireGuard server.
+few settings, users can easily get a REST API to manage their own Xray server.
 
 <br/>
 
@@ -51,30 +51,30 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 - Email: twicegoddessana1229@gmail.com
 - Project
-  Link: [https://github.com/tgoddessana/wireguard-restapi](https://github.com/tgoddessana/wireguard-restapi)
+  Link: [https://github.com/tgoddessana/Xray-restapi](https://github.com/tgoddessana/Xray-restapi)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/tgoddessana/wireguard-restapi.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/tgoddessana/Xray-restapi.svg?style=for-the-badge
 
-[contributors-url]: https://github.com/tgoddessana/wireguard-restapi/graphs/contributors
+[contributors-url]: https://github.com/tgoddessana/Xray-restapi/graphs/contributors
 
-[forks-shield]: https://img.shields.io/github/forks/tgoddessana/wireguard-restapi.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/tgoddessana/Xray-restapi.svg?style=for-the-badge
 
-[forks-url]: https://github.com/tgoddessana/wireguard-restapi/network/members
+[forks-url]: https://github.com/tgoddessana/Xray-restapi/network/members
 
-[stars-shield]: https://img.shields.io/github/stars/tgoddessana/wireguard-restapi.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/tgoddessana/Xray-restapi.svg?style=for-the-badge
 
-[stars-url]: https://github.com/tgoddessana/wireguard-restapi/stargazers
+[stars-url]: https://github.com/tgoddessana/Xray-restapi/stargazers
 
-[issues-shield]: https://img.shields.io/github/issues/tgoddessana/wireguard-restapi.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/tgoddessana/Xray-restapi.svg?style=for-the-badge
 
-[issues-url]: https://github.com/tgoddessana/wireguard-restapi/issues
+[issues-url]: https://github.com/tgoddessana/Xray-restapi/issues
 
-[license-shield]: https://img.shields.io/github/license/tgoddessana/wireguard-restapi.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/tgoddessana/Xray-restapi.svg?style=for-the-badge
 
-[license-url]: https://github.com/tgoddessana/wireguard-restapi/blob/master/LICENSE.txt
+[license-url]: https://github.com/tgoddessana/Xray-restapi/blob/master/LICENSE.txt
 
 [Python]: https://img.shields.io/badge/python-306998?style=for-the-badge&logo=python&logoColor=white
 

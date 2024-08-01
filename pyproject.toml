@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "wireguard-restapi"
+name = "xray-restapi"
 version = "0.1.0"
-description = "A simple, secure, and easy way to build a WireGuard API server."
+description = "A simple, secure, and easy way to build a Xray API server."
 authors = ["tgoddessana <twicegoddessana1229@gmail.com>"]
 readme = "README.md"
 
