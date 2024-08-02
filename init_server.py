@@ -1,7 +1,6 @@
 import argparse
 import os
 import shutil
-import time
 import uuid
 
 from scripts.create_configs import update_nginx_config, create_xray_config
@@ -22,11 +21,19 @@ if __name__ == "__main__":
         required=True,
         help="Email address for Let's Encrypt",
     )
+    parser.add_argument(
+        "--letsencrypt-staging",
+        required=False,
+        type=int,
+        default=1,
+        help="Staging environment for Let's Encrypt, 1 for staging, 0 for production",
+    )
     args = parser.parse_args()
 
     try:
         domain = args.domain
         email = args.email
+        staging = args.letsencrypt_staging
         xray_vmess_clients = [
             {
                 "id": str(uuid.uuid4()),
@@ -42,9 +49,9 @@ if __name__ == "__main__":
         os.makedirs("compose-data/xray/config", exist_ok=True)
 
         start_docker_compose()
-        update_nginx_config(domain)
-        create_xray_config(xray_vmess_clients)
-        init_letsencrypt(email, domain)
+        update_nginx_config(domain=domain)
+        create_xray_config(xray_vmess_clients=xray_vmess_clients)
+        init_letsencrypt(email=email, domain=domain, staging=staging)
     except Exception as e:
         print(f"Error: {e}")
         print("### Shutting down docker-compose ...")
