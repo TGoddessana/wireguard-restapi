@@ -1,5 +1,6 @@
 import argparse
 import os
+import shutil
 import time
 import uuid
 
@@ -23,23 +24,29 @@ if __name__ == "__main__":
     )
     args = parser.parse_args()
 
-    domain = args.domain
-    email = args.email
-    xray_vmess_clients = [
-        {
-            "id": str(uuid.uuid4()),
-            "level": 0,
-        },
-        {
-            "id": str(uuid.uuid4()),
-            "level": 0,
-        },
-    ]
+    try:
+        domain = args.domain
+        email = args.email
+        xray_vmess_clients = [
+            {
+                "id": str(uuid.uuid4()),
+                "level": 0,
+            },
+            {
+                "id": str(uuid.uuid4()),
+                "level": 0,
+            },
+        ]
 
-    os.makedirs("compose-data/nginx/conf.d", exist_ok=True)
-    os.makedirs("compose-data/xray/config", exist_ok=True)
+        os.makedirs("compose-data/nginx/conf.d", exist_ok=True)
+        os.makedirs("compose-data/xray/config", exist_ok=True)
 
-    start_docker_compose()
-    update_nginx_config(domain)
-    create_xray_config(xray_vmess_clients)
-    init_letsencrypt(domain, email)
+        start_docker_compose()
+        update_nginx_config(domain)
+        create_xray_config(xray_vmess_clients)
+        init_letsencrypt(domain, email)
+    except Exception as e:
+        print(e)
+        os.system("docker compose down")
+        shutil.rmtree("compose-data")
+        exit(1)
