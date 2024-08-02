@@ -46,7 +46,8 @@ if __name__ == "__main__":
         create_xray_config(xray_vmess_clients)
         init_letsencrypt(email, domain)
     except Exception as e:
-        print(e)
-        os.system("docker compose down")
+        print(f"Error: {e}")
+        print("### Shutting down docker-compose ...")
+        os.system("docker system prune -a --volumes")
         shutil.rmtree("compose-data")
         exit(1)
