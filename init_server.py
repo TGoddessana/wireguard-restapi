@@ -44,7 +44,7 @@ if __name__ == "__main__":
         start_docker_compose()
         update_nginx_config(domain)
         create_xray_config(xray_vmess_clients)
-        init_letsencrypt(domain, email)
+        init_letsencrypt(email, domain)
     except Exception as e:
         print(e)
         os.system("docker compose down")
