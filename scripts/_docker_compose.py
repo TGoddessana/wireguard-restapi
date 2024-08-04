@@ -15,3 +15,11 @@ def clean_docker_images():
     """
     print("### Cleaning up docker images ...")
     subprocess.run(["docker", "system", "prune", "-a", "--volumes"], check=True)
+
+
+def clean_docker_containers():
+    """
+    Clean up all the docker containers.
+    """
+    print("### Cleaning up docker containers ...")
+    subprocess.run(["docker", "container", "prune", "-f"], check=True)
