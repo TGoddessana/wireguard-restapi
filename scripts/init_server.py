@@ -1,7 +1,6 @@
 import argparse
 import os
 import shutil
-import uuid
 
 from scripts.create_configs import update_nginx_config, create_xray_config
 from scripts.docker_compose import start_docker_compose
@@ -34,16 +33,7 @@ if __name__ == "__main__":
         domain = args.domain
         email = args.email
         staging = args.letsencrypt_staging
-        xray_vmess_clients = [
-            {
-                "id": str(uuid.uuid4()),
-                "level": 0,
-            },
-            {
-                "id": str(uuid.uuid4()),
-                "level": 0,
-            },
-        ]
+        xray_vmess_clients = []
 
         os.makedirs("compose-data/nginx/conf.d", exist_ok=True)
         os.makedirs("compose-data/xray/config", exist_ok=True)
