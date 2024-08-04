@@ -8,6 +8,18 @@ services:
       - "10000:10000"
     restart: unless-stopped
 
+  xray-restapi:
+    build:
+      context: .
+    container_name: xray-restapi
+    volumes:
+      - ./compose-data:/app/compose-data
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+    depends_on:
+      - xray
+
   nginx:
     image: nginx:latest
     container_name: nginx
@@ -31,3 +43,4 @@ services:
       - ./compose-data/certbot/conf:/etc/letsencrypt
       - ./compose-data/certbot/www:/var/www/certbot
     entrypoint: /bin/sh -c 'trap exit TERM; while :; do sleep 6h & wait $${!}; certbot renew; done'
+
