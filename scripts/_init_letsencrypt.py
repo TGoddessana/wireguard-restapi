@@ -9,18 +9,6 @@ def init_letsencrypt(
     rsa_key_size=4096,
     staging=1,  # 0 for production, 1 for staging
 ):
-    print("### Checking Docker installation ...")
-    try:
-        subprocess.run(
-            ["docker", "--version"],
-            stdout=subprocess.DEVNULL,
-            stderr=subprocess.DEVNULL,
-            check=True,
-        )
-        print("### Docker is installed.")
-    except subprocess.CalledProcessError:
-        raise Exception("Docker is not installed.")
-
     domain = domain
     rsa_key_size = rsa_key_size
     data_path = "./compose-data/certbot"
