@@ -1,5 +1,4 @@
 import subprocess
-import time
 
 
 def start_docker_compose():

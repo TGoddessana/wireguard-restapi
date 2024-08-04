@@ -2,9 +2,9 @@ import argparse
 import os
 import shutil
 
-from scripts.create_configs import update_nginx_config, create_xray_config
-from scripts.docker_compose import start_docker_compose
-from scripts.init_letsencrypt import init_letsencrypt
+from create_configs import update_nginx_config, create_xray_config
+from docker_compose import start_docker_compose
+from init_letsencrypt import init_letsencrypt
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
