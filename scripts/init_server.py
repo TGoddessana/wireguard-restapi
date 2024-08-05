@@ -2,9 +2,9 @@ import argparse
 import os
 import shutil
 
-from create_configs import update_nginx_config, create_xray_config
-from docker_compose import start_docker_compose
-from init_letsencrypt import init_letsencrypt
+from _create_configs import update_nginx_config, create_xray_config
+from _docker_compose import start_docker_compose
+from _init_letsencrypt import init_letsencrypt
 
 
 parser = argparse.ArgumentParser(description="Setup XRay and Nginx with Let's Encrypt")
