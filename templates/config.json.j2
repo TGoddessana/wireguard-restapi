@@ -4,6 +4,7 @@
     "error": "/var/log/xray/error.log",
     "loglevel": "warning"
   },
+  "stats": {},
   "api": {
     "services": [
       "HandlerService",
@@ -12,7 +13,6 @@
     ],
     "tag": "api"
   },
-  "stats": {},
   "policy": {
     "levels": {
       "0": {
@@ -35,8 +35,7 @@
       "settings": {
         "address": "127.0.0.1"
       },
-      "tag": "api",
-      "sniffing": null
+      "tag": "api"
     },
     {
       "port": 10000,
@@ -64,6 +63,7 @@
   ],
   "outbounds": [
     {
+      "tag": "direct",
       "protocol": "freedom",
       "settings": {}
     }
