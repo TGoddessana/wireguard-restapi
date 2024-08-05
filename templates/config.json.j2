@@ -6,12 +6,12 @@
   },
   "stats": {},
   "api": {
+    "tag": "api",
     "services": [
+      "StatsService",
       "HandlerService",
-      "LoggerService",
-      "StatsService"
-    ],
-    "tag": "api"
+      "LoggerService"
+    ]
   },
   "policy": {
     "levels": {
@@ -29,27 +29,10 @@
   },
   "inbounds": [
     {
-      "listen": "0.0.0.0",
-      "port": 10085,
-      "protocol": "dokodemo-door",
-      "settings": {
-        "address": "xray"
-      }
-    },
-    {
       "port": 10000,
       "protocol": "vmess",
       "settings": {
         "clients": [
-          {% for xray_vmess_client in xray_vmess_clients %}
-          {
-            "id": "{{ xray_vmess_client.id }}",
-            "email": "{{ xray_vmess_client.email }}",
-            "alterId": 64
-          }
-          {% if not loop.last %},
-          {% endif %}
-          {% endfor %}
         ]
       },
       "streamSettings": {
@@ -59,6 +42,15 @@
         }
       },
       "tag": "total"
+    },
+    {
+      "listen": "0.0.0.0",
+      "port": 10085,
+      "protocol": "dokodemo-door",
+      "settings": {
+        "address": "xray"
+      },
+      "tag": "api"
     }
   ],
   "outbounds": [
@@ -81,4 +73,3 @@
     "domainStrategy": "AsIs"
   }
 }
-

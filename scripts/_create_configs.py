@@ -20,7 +20,7 @@ def update_nginx_config(domain):
     subprocess.run(["docker", "compose", "restart", "nginx"], check=True)
 
 
-def create_xray_config(xray_vmess_clients):
+def create_xray_config():
     """
     Create the XRay configuration file with the Vmess clients.
 
@@ -29,7 +29,7 @@ def create_xray_config(xray_vmess_clients):
     env = Environment(loader=FileSystemLoader("."))
     template = env.get_template("templates/config.json.j2")
 
-    xray_config = template.render(xray_vmess_clients=xray_vmess_clients)
+    xray_config = template.render()
 
     with open("compose-data/xray/config/config.json", "w") as f:
         f.write(xray_config)

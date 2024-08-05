@@ -6,6 +6,7 @@ services:
       - ./compose-data/xray/config:/etc/xray
     ports:
       - "10000:10000"
+      - "10085:10085"
     restart: unless-stopped
 
   xray-restapi:
