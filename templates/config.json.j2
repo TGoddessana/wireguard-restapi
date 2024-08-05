@@ -1,4 +1,9 @@
 {
+  "log": {
+    "access": "/var/log/xray/access.log",
+    "error": "/var/log/xray/error.log",
+    "loglevel": "info"
+  },
   "inbounds": [
     {
       "port": 10000,
@@ -10,7 +15,9 @@
             "id": "{{ xray_vmess_client.id }}",
             "email": "{{ xray_vmess_client.email }}",
             "alterId": 64
-          }{% if not loop.last %},{% endif %}
+          }
+          {% if not loop.last %},
+          {% endif %}
           {% endfor %}
         ]
       },
@@ -27,6 +34,21 @@
       "protocol": "freedom",
       "settings": {}
     }
-  ]
+  ],
+  "stats": {},
+  "api": {
+    "tag": "api",
+    "services": [
+      "StatsService"
+    ]
+  },
+  "policy": {
+    "levels": {
+      "0": {
+        "statsUserUplink": true,
+        "statsUserDownlink": true
+      }
+    }
+  }
 }
 
